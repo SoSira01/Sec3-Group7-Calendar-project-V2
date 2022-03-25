@@ -1,7 +1,24 @@
-# Vue 3 + Vite
+# INT 203 Project
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Calendar web application 
+This Website built with vue.js, Tailwind and DaisyUI 
+## App Description
+- Display information monthly.
+- You can write Important note, Checklist and To do in daily life
+- Application is being able to show the month, year that you need.
+- When notes are written on each day, they will show marks on the calendar of the selected day. 
+- Display the current date in red color on the calendar 
+## How to use our web application
 
-## Recommended IDE Setup
+https://user-images.githubusercontent.com/47183080/155845459-3074e7c1-2546-4517-9086-645ecaf6e376.mp4
+	
+Team 
+| NO   | NAME                 | STUDENTID   |
+| :--: | -------------------- | ----------- |
+|1|สิรภพ ไพเราะ   |63130500118| 
+|2|อมรพงษ์ ดวงฉวี  |63130500131|
+|3|กชกร วงค์ทิพย์   |63130500137|
+|4|ดรัณ มหาวนากูล  |63130500141|
+|5|กรรณิการ์ งาสุวรรณ์ |63130500147|
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+
