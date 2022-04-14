@@ -3,7 +3,8 @@
 <template>
   <div>
     <div>
-      <router-link :to="{ name: 'Home' }">Home</router-link> <br>
+      <router-link :to="{ name: 'Home' }">Home</router-link>
+      <router-link :to="{ name: 'ShowNote' }">ShowNote</router-link>
     </div>
     <div>
       <router-view></router-view>
@@ -18,5 +19,4 @@ a{
 .router-link-active {
   color:blue
 }
-
 </style>
