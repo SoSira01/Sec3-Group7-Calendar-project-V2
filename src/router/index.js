@@ -1,8 +1,8 @@
 import {createRouter,createWebHistory} from 'vue-router'
 import NotFound from '../views/NotFound.vue'
 import Home from '../views/calendar.vue'
-import History from '../views/History.vue'
-
+import ShowNote from '../views/ShowNote.vue'
+import AboutUs from '../views/AboutUs.vue'
 
 const history = createWebHistory()
 const routes = [
@@ -12,9 +12,14 @@ const routes = [
         component: Home
     },
     {
-        path: '/',
-        name: 'History',
-        component: History
+        path: '/ShowNote',
+        name: 'ShowNote',
+        component: ShowNote
+    },
+    {
+        path: '/AboutUs',
+        name: 'AboutUs',
+        component: AboutUs
     },
     {
         path: '/:catchNotMatchPath(.*)',
