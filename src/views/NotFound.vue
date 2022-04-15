@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+import { useRouter } from 'vue-router'
+
+const appRouter = useRouter();
+
+const goHome = () => appRouter.push({ name: 'Home' });
+</script>
+
 <template>
   <div class="modal-mask">
     <div class="modal-wrapper">
@@ -6,7 +13,7 @@
         <div class="modal-header"><h3>Page Not Found</h3></div>
         <div class="modal-body">Please try again!</div>
         <div class="modal-button">
-          <button @click="closeModal">Close</button>
+          <button @click="goHome">Back to Home</button>
         </div>
       </div>
     </div>
@@ -45,6 +52,6 @@
 }
 .modal-button {
   display: flex;
-  justify-content: end;
+  flex: end;
 }
 </style>

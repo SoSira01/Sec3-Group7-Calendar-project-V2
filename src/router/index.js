@@ -1,6 +1,6 @@
 import {createRouter,createWebHistory} from 'vue-router'
 import NotFound from '../views/NotFound.vue'
-import Home from '../views/calendar.vue'
+import Home from '../views/Home.vue'
 import History from '../views/History.vue'
 
 
