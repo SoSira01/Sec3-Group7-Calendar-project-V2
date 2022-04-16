@@ -16,10 +16,9 @@ console.log(props.creators)
             <br>
             {{creator.firstname}}  {{creator.lastname}}
             <br>
-            <p v-for = "(social, i) in creators.socials" :key="i">
-            {{social.fb}} {{social.fbname}} {{social.github}} {{social.githubname}}
-            </p>
-            {{creator.socials}}
+            {{creator.socials.fb}}   {{creator.socials.fbname}} 
+            <br>
+            {{creator.socials.github}}   {{creator.socials.githubname}}
             </div>
     </div>
 </template>

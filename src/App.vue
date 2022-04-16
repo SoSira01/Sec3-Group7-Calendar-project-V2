@@ -4,7 +4,7 @@
   <div>
     <div>
       <router-link :to="{ name: 'Home' }">Home</router-link>
-      <router-link :to="{ name: 'History' }">History</router-link>
+      <router-link :to="{ name: 'ShowNotes' }">ShowNotes</router-link>
       <router-link :to="{ name: 'AboutUs' }">AboutUs</router-link>
     </div>
     <div>
