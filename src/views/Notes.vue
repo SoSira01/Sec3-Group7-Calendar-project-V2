@@ -93,9 +93,9 @@ const editdes = (notetoedit, desId) => {
     if(desId == value.id){
       console.log(value.id)
       value.des = newDes;
+      update(notetoedit.id, notetoedit.title, notetoedit.descriptionlist);
     }
   })
-  update(notetoedit.id, notetoedit.title, notetoedit.descriptionlist);
 }
 
 
