@@ -105,7 +105,7 @@ const update = async (noteId ,title, descArr) => {
 <template>
   <div>
     <AddNote @addNote="add"/>
-    <ListNote :listNotes="Notes" @removedes="removedes"></ListNote>
+    <ListNote :listNotes="Notes" @removedes="removedes" @editdes="editdes"></ListNote>
   </div>
 
 </template>

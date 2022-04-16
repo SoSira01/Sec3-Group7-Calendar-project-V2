@@ -16,9 +16,9 @@ console.log(props.creators)
             <br>
             {{creator.firstname}}  {{creator.lastname}}
             <br>
-            {{creator.socials.fb}}   {{creator.socials.fbname}} 
+            {{creator.socials.fb}}  
             <br>
-            {{creator.socials.github}}   {{creator.socials.githubname}}
+            {{creator.socials.github}}  
             </div>
     </div>
 </template>

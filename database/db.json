@@ -4,11 +4,6 @@
       "title": "test",
       "descriptionlist": [
         {
-          "id": 1,
-          "des": "123",
-          "date": "2022-04-16"
-        },
-        {
           "id": 2,
           "des": "test",
           "date": "2022-04-15"
@@ -46,9 +41,7 @@
       "lastname": "Wongtip",
       "socials": {
         "fb": "https://www.facebook.com/kodchakorn.mhai",
-        "fbname": "Kodchakorn Wongtip",
-        "github": "https://github.com/huato112",
-        "githubname": "huato112"
+        "github": "https://github.com/kwmhai"
       }
     },
     {
@@ -57,21 +50,16 @@
       "lastname": "Duangchawee",
       "socials": {
         "fb": "https://www.facebook.com/Amornnnnn",
-        "fbname": "Amornpong Duangchawee",
-        "github": "https://github.com/huato112",
-        "githubname": "huato112"
+        "github": "https://github.com/huato112"
       }
     },
     {
       "id": 5,
-      "firstname": "Amornpong",
+      "firstname": "Darun",
       "lastname": "Duangchawee",
-      "img": "/images/creator/Amornpong.png",
       "socials": {
         "fb": "https://www.facebook.com/Amornnnnn",
-        "fbname": "Amornpong Duangchawee",
-        "github": "https://github.com/huato112",
-        "githubname": "huato112"
+        "github": "https://github.com/huato112"
       }
     }
   ]

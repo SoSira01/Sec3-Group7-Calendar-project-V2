@@ -1,6 +1,5 @@
 <script setup>
-import { ref } from 'vue'
-defineEmits(['removedes'])
+defineEmits(['removedes','editdes'])
 let props = defineProps({
     listNotes: {
         type: Array,
@@ -13,7 +12,8 @@ let props = defineProps({
     <div>
         <div v-for="(note, index) in listNotes" :key='index'>
             <h2>Topic : {{ note.title }}</h2>
-             <p v-for="(deslist, i) in note.descriptionlist" :key="i">{{ deslist.des }}, {{ deslist.date }}<!--, {{deslist.id}} -->
+             <p v-for="(deslist, i) in note.descriptionlist" :key="i">{{ deslist.des }}, {{ deslist.date }}
+            <button @click="$emit('editdes', { noteId : note.id, desId : deslist.id})">edit</button>
             <button @click="$emit('removedes', { noteId : note.id, desId : deslist.id})">Delete</button>
             </p>
         </div>
