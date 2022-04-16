@@ -9,7 +9,7 @@ defineProps({
 </script>
  
 <template>
-<button @click="$emit('clickMe',$event)">{{ buttonName }}</button>
+<button  class="btn btn-active btn-primary" @click="$emit('clickMe',$event)">{{ buttonName }}</button>
 </template>
  
 <style>

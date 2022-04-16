@@ -1,167 +1,58 @@
 <script setup></script>
 
 <template>
-  <div class="area">
-    <div>
-      <!-- <router-link :to="{ name: 'ShowNote' }">ShowNote</router-link> -->
-    </div>
+<div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost normal-case text-xl">Calendar</a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal p-0">
+      <li><router-link :to="{ name: 'Home' }">Home </router-link></li>
+      <li tabindex="0">
+        <router-link :to="{ name: 'Notes' }">Notes </router-link>
+      </li>
+      <li><router-link :to="{ name: 'AboutUs' }">AboutUs </router-link></li>
+    </ul>
+  </div>
+</div>
+<!--
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKdJREFUSEtjZKAxYKSx+QyELPgPdQAudYTk6W+BAwMDw3wGBgYFMoPuAQMDQyIDA8MBmH50r4MUyJNpOEwbyAxFXBbAwpRCOxBBj+4DgpFGwGYM/QNmAc2DaPhYAIsj9MjDxcdInbgiGV0hzSwgNy7gDifkA5pbMBoHGPUBzQu7DwwMDPzkxixU30Pk+gQ9FYEqnAUU1AkgwxPwVTgUOh5TO6FKn2ILAT6uKhlJWfgFAAAAAElFTkSuQmCC"/>
+  <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+ <h2>Calendar</h2>
+  </a>
+ 
+
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+           <router-link :to="{ name: 'Home' }">Home</router-link>
+
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            <router-link :to="{ name: 'Notes' }">Notes</router-link>
+
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+            <router-link :to="{ name: 'AboutUs' }">AboutUs</router-link>
+
+      </a>
+-->
+<!-- 
+    <router-link :to="{ name: 'Home' }">Calendar</router-link>
+    <router-link :to="{ name: 'Notes' }">Notes</router-link>
+    <router-link :to="{ name: 'AboutUs' }">AboutUs</router-link> -->
+
     <div>
       <router-view></router-view>
     </div>
-
-    <div>
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-  </div>
 </template>
 
 <style scoped>
-a {
-  color: gray
+a{
+  color: rgb(19, 19, 19)
 }
-
 .router-link-active {
-  color: blue
+  color:blue
 }
-
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
-
-
-
-.area {
-  top: 0;
-  left: 0;
-  position: absolute;
-  background: #4e54c8;
-  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-  width: 100%;
-  height: 100vh;
-
-
-}
-
-.circles {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.circles li {
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  animation: animate 25s linear infinite;
-  bottom: -150px;
-
-}
-
-.circles li:nth-child(1) {
-  left: 25%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 0s;
-}
-
-
-.circles li:nth-child(2) {
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 12s;
-}
-
-.circles li:nth-child(3) {
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
-}
-
-.circles li:nth-child(4) {
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  animation-delay: 0s;
-  animation-duration: 18s;
-}
-
-.circles li:nth-child(5) {
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(6) {
-  left: 75%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 3s;
-}
-
-.circles li:nth-child(7) {
-  left: 35%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 7s;
-}
-
-.circles li:nth-child(8) {
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
-}
-
-.circles li:nth-child(9) {
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-
-.circles li:nth-child(10) {
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 11s;
-}
-
-
-
-@keyframes animate {
-
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
-
+body{
+  color: white
 }
 </style>

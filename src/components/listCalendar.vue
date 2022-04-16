@@ -3,26 +3,10 @@ import clickButton from '../components/clickButton.vue'
 import {ref, computed} from 'vue'
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-var mydate = ref()
 
 //calendar 
 let currentDate = ref(new Date())
-// function nextMonth(no) {
-//     currentDate.value = new Date(currentDate.value.getFullYear(), currentDate.value.getMonth() + no, 1);
-// }
 
-// function nextYear(no) {
-//     currentDate.value = new Date(
-//         currentDate.value.getFullYear() + no, currentDate.value.getMonth(), 1)
-// }
-// //month = 0-11
-// function selectMonth(month) {
-//     currentDate.value = new Date(currentDate.value.getFullYear(), month, 1)
-// }
-// //Christian Era ex 2022
-// function selectYear(year) {
-//     currentDate.value = new Date(year, currentDate.value.getMonth(), 1)
-// }
 //ใช่วันนี้ไหม
 function isToday(date) {
     return (
@@ -38,45 +22,6 @@ function calDay(week, day) {
 }
 //1เดือน = กี่วัน
 const daysInMonth = computed(() => new Date(currentDate.value.getFullYear(), currentDate.value.getMonth() + 1, 0).getDate())
-// function isNotBlank(a) {
-//     if (a === '') {
-//         return false
-//     }
-//     return true
-// }
-
-// function formatDate(value) {
-//     let date = new Date(value)
-//     return { 'year': date.getFullYear(), 'month': date.getMonth(), 'date': date.getDate(), 'day': date.getDay() }
-// }
-//color mark for importants, to do and checklists note
-// function isMonthYear(dayinput) {
-//     let dayEvent = []
-//     for (let i = 0; i < importants.value.length; i++) {
-//         let date = formatDate(importants.value[i].date)
-//         if (date.year == currentDate.value.getFullYear() && date.month == currentDate.value.getMonth()) {
-//             dayEvent.push(date.date)
-//         }
-//     }
-//     for (let i = 0; i < checklists.value.length; i++) {
-//         let date = formatDate(checklists.value[i].date)
-//         if (date.year == currentDate.value.getFullYear() && date.month == currentDate.value.getMonth()) {
-//             dayEvent.push(date.date)
-//         }
-//     }
-//     for (let i = 0; i < todos.value.length; i++) {
-//         let date = formatDate(todos.value[i].date)
-//         if (date.year == currentDate.value.getFullYear() && date.month == currentDate.value.getMonth()) {
-//             dayEvent.push(date.date)
-//         }
-//     }
-//     for (let i = 0; i < dayEvent.length; i++) {
-//         if (dayinput == dayEvent[i]) {
-//             return true
-//         }
-//     }
-//     return false
-// }
 
 //ลบค่าใน arr 
 function removeArrItemOnce(arr, value) {
@@ -87,7 +32,14 @@ function removeArrItemOnce(arr, value) {
     return arr;
 }
 
+function nextMonth(no) {
+  currentDate.value = new Date(currentDate.value.getFullYear(),currentDate.value.getMonth() + no,1);
+}
 
+function nextYear(no) {
+  currentDate.value = new Date(
+    currentDate.value.getFullYear() + no,currentDate.value.getMonth(),1)
+}
 </script>
  
 <template>
@@ -112,9 +64,6 @@ function removeArrItemOnce(arr, value) {
                         <div>
                             <span :class="{ 'text-red-500': isToday(calDay(week, day)) }">
                                 {{ calDay(week, day) <= 0 || calDay(week, day) > daysInMonth ? "" : calDay(week, day) }}
-                                    <!-- <div
-                                        :class="{ 'badge badge-error gap-2 absolute': isMonthYear(calDay(week, day)) }">
-                                    </div> -->
                             </span>
                         </div>
                     </td>
@@ -122,7 +71,22 @@ function removeArrItemOnce(arr, value) {
             </tbody>
         </table>
     </div>
-
+<clickButton 
+          @clickMe="nextMonth(-1)"
+          buttonName ='Previous Month'/>
+       
+          <clickButton 
+          @clickMe="nextMonth(1)"
+          buttonName ='Next Month'/>
+        
+          <clickButton 
+           @clickMe="nextYear(-1)"
+           buttonName = 'Previous Year'/>
+       
+      
+          <clickButton
+           @clickMe="nextYear(1)"
+           buttonName='nextYear'/>
 </template>
  
 <style>
