@@ -2,6 +2,9 @@
 import { ref, onBeforeMount } from 'vue'
 import ListNote from '../components/listNote.vue';
 import AddNote from '../components/addNote.vue';
+import { useRouter } from 'vue-router'
+
+
 const Notes = ref([])
 
 //GET
@@ -54,7 +57,7 @@ const removedes = (value) => {
       title = note.title;
       update(note.id, title, descArr)
     }
-    
+
   });
 }
 const add = (value) => {
@@ -78,8 +81,26 @@ const add = (value) => {
     }
   })
 }
+
+const editdes = (notetoedit, desId) => {
+  let newDes = "";
+  if (!newDes) {
+    newDes = prompt('Enter New Description');
+  }
+  console.log(newDes)
+  notetoedit.descriptionlist.forEach((value) => {
+      console.log(value)
+    if(desId == value.id){
+      console.log(value.id)
+      value.des = newDes;
+    }
+  })
+  update(notetoedit.id, notetoedit.title, notetoedit.descriptionlist);
+}
+
+
 //PUT 
-const update = async (noteId ,title, descArr) => {
+const update = async (noteId, title, descArr) => {
   const res = await fetch(`http://localhost:5000/listNotes/${noteId}`, {
     method: 'PUT',
     headers: {
@@ -100,15 +121,18 @@ const update = async (noteId ,title, descArr) => {
     console.log('error, cannot edit')
   }
 }
+
 </script>
 
 <template>
   <div>
-    <AddNote @addNote="add"/>
-    <ListNote :listNotes="Notes" @removedes="removedes" @editdes="editdes"></ListNote>
+    <AddNote @addNote="add" />
+
+    <ListNote :listNotes="Notes" @removedes="removedes" @editdes="editdes" />
   </div>
 
 </template>
   
 
-<style></style>
+<style>
+</style>

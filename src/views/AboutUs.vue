@@ -1,7 +1,7 @@
 <script setup>
 
 import { ref, onBeforeMount } from 'vue'
-import listCreator from '../components/listCreator.vue'
+import ListCreator from '../components/listCreator.vue'
 
 
 const Notes = ref([])
@@ -20,7 +20,8 @@ onBeforeMount(() => {
 </script>
  
 <template>
-<listCreator :creators="Notes"/>
+<ListCreator :creators="Notes"/>
+<img src="" alt="">
 </template>
  
 <style scoped></style>

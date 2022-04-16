@@ -19,9 +19,7 @@
       "lastname": "Phairoh",
       "socials": {
         "fb": "https://www.facebook.com/siraphob.phairoh",
-        "fbname": "Siraphob Phairoh",
-        "github": "https://github.com/SoSira01",
-        "githubname": "so_sira"
+        "github": "https://github.com/SoSira01"
       }
     },
     {
@@ -30,9 +28,7 @@
       "lastname": "Duangchawee",
       "socials": {
         "fb": "https://www.facebook.com/Amornnnnn",
-        "fbname": "Amornpong Duangchawee",
-        "github": "https://github.com/huato112",
-        "githubname": "huato112"
+        "github": "https://github.com/huato112"
       }
     },
     {
@@ -46,20 +42,20 @@
     },
     {
       "id": 4,
-      "firstname": "Amornpong",
-      "lastname": "Duangchawee",
+      "firstname": "Darun",
+      "lastname": "Mahavanakul",
       "socials": {
-        "fb": "https://www.facebook.com/Amornnnnn",
-        "github": "https://github.com/huato112"
+        "fb": "https://www.facebook.com/excister",
+        "github": "https://github.com/navisk555"
       }
     },
     {
       "id": 5,
-      "firstname": "Darun",
-      "lastname": "Duangchawee",
+      "firstname": "Kannika",
+      "lastname": "Nga-suwan",
       "socials": {
-        "fb": "https://www.facebook.com/Amornnnnn",
-        "github": "https://github.com/huato112"
+        "fb": "https://www.facebook.com/profile.php?id=100007687120830",
+        "github": "https://github.com/kannika2545"
       }
     }
   ]

@@ -13,11 +13,10 @@ let props = defineProps({
         <div v-for="(note, index) in listNotes" :key='index'>
             <h2>Topic : {{ note.title }}</h2>
              <p v-for="(deslist, i) in note.descriptionlist" :key="i">{{ deslist.des }}, {{ deslist.date }}
-            <button @click="$emit('editdes', { noteId : note.id, desId : deslist.id})">edit</button>
+            <button @click="$emit('editdes', {note})">edit</button>
             <button @click="$emit('removedes', { noteId : note.id, desId : deslist.id})">Delete</button>
             </p>
         </div>
     </div>
 </template>
-<style>
-</style>
+<style></style>
