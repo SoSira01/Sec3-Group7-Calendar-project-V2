@@ -1,12 +1,22 @@
 {
   "listNotes": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "test",
+      "descriptionlist": [
+        {
+          "id": 1,
+          "des": "this is test",
+          "date": "2022-04-01"
+        },
+        {
+          "id": 2,
+          "des": "test0222",
+          "date": "2022-04-01"
+        }
+      ],
+      "id": 1
     }
   ],
-  
   "creators": [
     {
       "id": 1,
@@ -16,8 +26,6 @@
       "socials": {
         "fb": "https://www.facebook.com/siraphob.phairoh",
         "fbname": "Siraphob Phairoh",
-        "ig": "https://www.instagram.com/so_sira/",
-        "igname": "so_sira",
         "github": "https://github.com/SoSira01",
         "githubname": "so_sira"
       }
@@ -30,8 +38,6 @@
       "socials": {
         "fb": "https://www.facebook.com/Amornnnnn",
         "fbname": "Amornpong Duangchawee",
-        "ig": "https://www.instagram.com/a.mornp/",
-        "igname": "a.mornp",
         "github": "https://github.com/huato112",
         "githubname": "huato112"
       }
@@ -44,8 +50,6 @@
       "socials": {
         "fb": "https://www.facebook.com/kodchakorn.mhai",
         "fbname": "Kodchakorn Wongtip",
-        "ig": "https://www.instagram.com/a.mornp/",
-        "igname": "a.mornp",
         "github": "https://github.com/huato112",
         "githubname": "huato112"
       }
@@ -58,8 +62,6 @@
       "socials": {
         "fb": "https://www.facebook.com/Amornnnnn",
         "fbname": "Amornpong Duangchawee",
-        "ig": "https://www.instagram.com/a.mornp/",
-        "igname": "a.mornp",
         "github": "https://github.com/huato112",
         "githubname": "huato112"
       }
@@ -72,12 +74,9 @@
       "socials": {
         "fb": "https://www.facebook.com/Amornnnnn",
         "fbname": "Amornpong Duangchawee",
-        "ig": "https://www.instagram.com/a.mornp/",
-        "igname": "a.mornp",
         "github": "https://github.com/huato112",
         "githubname": "huato112"
       }
     }
-
   ]
 }

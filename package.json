@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "backend": "npx json-server --watch ./database/db.json --port 3001"
+    "backend": "npx json-server --watch ./database/db.json --port 5000"
   },
   "dependencies": {
     "daisyui": "^2.13.6",

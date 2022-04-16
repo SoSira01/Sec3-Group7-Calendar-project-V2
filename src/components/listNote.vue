@@ -1,31 +1,23 @@
 <script setup>
-import {ref} from 'vue'
-defineEmits(['delete','edit' ])
-defineProps({
+import { ref } from 'vue'
+defineEmits(['removedes'])
+let props = defineProps({
     listNotes: {
-        type: Object,
-        default: {}
+        type: Array,
+        default: []
     }
 })
-const newTitle = ref('')
-const newNote = ref('')
+
 </script>
- 
 <template>
     <div>
-
-    <p>Show Notelist </p>
-    <!-- Title : <input type="text" placeholder="Typing..." v-model="newTitle">
-    Note : <input type="text" placeholder="Typing..." v-model="newNote"> -->
-        <ul>
-            <li v-for="(listNote, index) in listNotes" :key="index">
-               {{listNote.titles}} , {{listNote.descriptions}}, {{listNote.date}} 
-            <button @click="$emit('delete',listNote.id)">delete</button>
-            <button @click="$emit('edit',{id : listNote.id, titles:newTitle ,descriptions: newNote, date: listNote.date })">edit</button>
-            </li>
-        </ul>
-
+        <div v-for="(note, index) in listNotes" :key='index'>
+            <h2>Topic : {{ note.title }}</h2>
+             <p v-for="(deslist, i) in note.descriptionlist" :key="i">{{ deslist.des }}, {{ deslist.date }}<!--, {{deslist.id}} -->
+            <button @click="$emit('removedes', { noteId : note.id, desId : deslist.id})">Delete</button>
+            </p>
+        </div>
     </div>
 </template>
- 
-<style></style>
+<style>
+</style>
