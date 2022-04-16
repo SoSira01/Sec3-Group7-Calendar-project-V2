@@ -1,9 +1,8 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue'
-import ListNote from '../components/listNote.vue';
-import AddNote from '../components/addNote.vue';
+import ListNote from '../components/ListNote.vue';
+import AddNote from '../components/AddNote.vue';
 import { useRouter } from 'vue-router'
-
 
 const Notes = ref([])
 
@@ -61,6 +60,7 @@ const removedes = (value) => {
   });
 }
 const add = (value) => {
+  if (value.newTitle == '' || value.newDescription == '' || value.newDate == '') {return alert('insert data error')}
   let title = ''
   let descArr = []
   if (Notes.value.find(o => o.title === value.newTitle) == undefined) {

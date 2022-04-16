@@ -25,7 +25,7 @@ a{
   color: rgb(19, 19, 19)
 }
 .router-link-active {
-  color:blue
+  color:rgb(255, 255, 255)
 }
 
 </style>

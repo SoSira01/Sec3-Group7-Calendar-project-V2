@@ -4,13 +4,11 @@
 This Website built with vue.js, Tailwind and DaisyUI 
 ## App Description
 - Display information monthly.
-- You can write Important note, Checklist and To do in daily life
+- Display the current date in color on the calendar
+- You can write note sort by category using db.json
+- Use router-link to connect with Home page, Notes page and AboutUs page.
 - Application is being able to show the month, year that you need.
-- When notes are written on each day, they will show marks on the calendar of the selected day. 
 - Display the current date in red color on the calendar 
-## How to use our web application
-
-https://user-images.githubusercontent.com/47183080/155845459-3074e7c1-2546-4517-9086-645ecaf6e376.mp4
 	
 Team 
 | NO   | NAME                 | STUDENTID   |

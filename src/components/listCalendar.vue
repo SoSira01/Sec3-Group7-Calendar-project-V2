@@ -44,7 +44,7 @@ function nextYear(no) {
  
 <template>
     <div>
-        <table class="text-center text-zinc-900 pl-50 w-full shadow-xl rounded-lg bg-zinc-200">
+        <table class="text-center text-zinc-900 pl-50 w-full shadow-xl rounded-lg bg-zinc-200 ">
             <thead>
                 <tr>
                     <th class="h-20" colspan="7">{{
