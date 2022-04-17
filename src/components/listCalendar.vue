@@ -1,5 +1,5 @@
 <script setup>
-import clickButton from '../components/clickButton.vue'
+import ClickButton from '../components/ClickButton.vue'
 import {ref, computed} from 'vue'
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
@@ -43,11 +43,11 @@ function nextYear(no) {
 </script>
  
 <template>
-    <div>
-        <table class="text-center text-zinc-900 pl-50 w-full shadow-xl rounded-lg bg-zinc-200 ">
+    <div class="mt-10 ml-10 mr-10 drop-shadow-2xl ">
+        <table class="text-center my-auto text-white w-full p-20 rounded-lg bg-zinc-800 justify-center">
             <thead>
                 <tr>
-                    <th class="h-20" colspan="7">{{
+                    <th class="h-20 text-accent text-lg" colspan="7">{{
                         currentDate.toLocaleString("en-US", {
                             month: "long", year:
                                 "numeric",
@@ -57,12 +57,13 @@ function nextYear(no) {
             </thead>
             <tbody>
                 <tr>
-                    <th v-for="(day, i) in days" :key="i" class="h-10">{{ day }}</th>
+                    <th v-for="(day, i) in days" :key="i" class="h-10 text-error">{{ day }}</th>
                 </tr>
                 <tr v-for="week in 6" :key="week">
                     <td v-for="day in 7" :key="day" class="h-10">
                         <div>
-                            <span :class="{ 'text-red-500': isToday(calDay(week, day)) }">
+                  <br>
+                            <span :class="{ 'text-zinc-800 bg-success p-1 rounded-full ': isToday(calDay(week, day)) }">
                                 {{ calDay(week, day) <= 0 || calDay(week, day) > daysInMonth ? "" : calDay(week, day) }}
                             </span>
                         </div>
@@ -70,23 +71,25 @@ function nextYear(no) {
                 </tr>
             </tbody>
         </table>
-    </div>
-<clickButton 
+        </div>
+        <div class=" flex justify-content-center mt-5 mx-auto  w-7/12">
+          <ClickButton 
           @clickMe="nextMonth(-1)"
           buttonName ='Previous Month'/>
        
-          <clickButton 
+          <ClickButton 
           @clickMe="nextMonth(1)"
           buttonName ='Next Month'/>
         
-          <clickButton 
+          <ClickButton 
            @clickMe="nextYear(-1)"
            buttonName = 'Previous Year'/>
        
-      
-          <clickButton
+          <ClickButton
            @clickMe="nextYear(1)"
-           buttonName='nextYear'/>
+           buttonName='nextYear'/> 
+        </div>      
+
 </template>
  
 <style>

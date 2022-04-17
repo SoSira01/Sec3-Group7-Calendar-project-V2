@@ -9,7 +9,7 @@ defineProps({
 </script>
  
 <template>
-<button  class="btn btn-active m-10 mr-auto justify-self-center" @click="$emit('clickMe',$event)">{{ buttonName }}</button>
+<button class="btn-sm btn btn-ghost m-5 mr-auto text-center animate-pulse drop-shadow-xl" @click="$emit('clickMe',$event)">{{ buttonName }}</button>
 </template>
  
 <style>

@@ -1,7 +1,7 @@
 <script setup>
 
 import { ref, onBeforeMount } from 'vue'
-import ListCreator from '../components/listCreator.vue'
+import ListCreator from '../components/ListCreator.vue'
 
 
 const Notes = ref([])
