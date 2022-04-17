@@ -4,12 +4,12 @@
 This Website built with vue.js, Tailwind and DaisyUI 
 ## App Description
 - Display information monthly.
-- Display the current date in color on the calendar.
+- Display the current date in circle on the calendar.
 - You can write note sort by category using db.json.
+- You can edit and delete if you type wrongly.
 - Use router-link to connect with Home page, Notes page and AboutUs page.
 - Application is being able to show the month, year that you need.
-- Display the current date in circle on the calendar.
-- You can edit and delete if you type wrongly.
+
 
 ## How to use this website
 - The Home page will display the calendar also you can click buttons to view the function of the calendar.
