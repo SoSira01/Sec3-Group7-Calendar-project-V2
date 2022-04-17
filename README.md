@@ -8,13 +8,13 @@ This Website built with vue.js, Tailwind and DaisyUI
 - You can write note sort by category using db.json.
 - Use router-link to connect with Home page, Notes page and AboutUs page.
 - Application is being able to show the month, year that you need.
-- Display the current date in red color on the calendar.
-- 
+- Display the current date in circle on the calendar.
+- You can edit and delete if you type wrongly.
 
 ## How to use this website
 - The Home page will display the calendar also you can click buttons to view the function of the calendar.
-- The Note page you can write about routine you do each day also you can edit and delete note that you want to.
-- The About us page will display the creator of the website and contact (Github and Facebook).
+- The Notes page you can write about routine you do each day also you can edit and delete note that you want to.
+- The AboutUs page will display the creator of the website and contact (Github and Facebook).
 	
 Team 
 | NO   | NAME                 | STUDENTID   |
