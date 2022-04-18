@@ -2,6 +2,7 @@
 
 # Calendar web application 
 This Website built with vue.js, Tailwind and DaisyUI 
+
 ## App Description
 -Display information monthly.
 -Display the current date in circle on the calendar.
